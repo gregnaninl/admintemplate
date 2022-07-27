@@ -1,7 +1,7 @@
 import React from "react"
 import Form from 'react-bootstrap/Form'
 
-function FormGroup ({label,type,register, placeholder,disabled}){    
+function FormGroup ({label,type,register, placeholder,disabled, name}){    
         return(
             <>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -10,7 +10,7 @@ function FormGroup ({label,type,register, placeholder,disabled}){
                     {type === 'select'
                     ?
                         <>
-                             <Form.Select  disabled = {disabled || false } {...register}  >
+                             <Form.Select  disabled = {disabled || false } {...register} name={name} >
                                     <option value="2022">2022</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
@@ -23,7 +23,7 @@ function FormGroup ({label,type,register, placeholder,disabled}){
 
                     :
                         <>
-                            <Form.Control type={type || "text"} {...register} 
+                            <Form.Control type={type || "text"} {...register} name={name}
                             placeholder={placeholder || ""} disabled = {disabled || false }  />
                         </>
                     }

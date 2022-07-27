@@ -5,25 +5,35 @@ import './index.css';
 
 
 
-import Container from 'react-bootstrap/Container';
+
 
 
 function App() {
 
   const [dark , setDark] = useState(false);
+  const [ login , setLogin] = useState(false);
 
   const modo = ( )=>{setDark(!dark);}
+  
+  const loguear = (datos)=>{
+    setLogin(datos);
+  }
 
   return ( 
    
-    <div className={dark ? `App dark` : 'App'}>
-       <Sidebar modo={modo} />
+    <div className={dark ? `App dark` : 'App'}> 
+        {login ? 
+          <>
+            <Sidebar modo={modo} loguear={loguear} />
+          </>
+              :
+          <>
+            <Login loguear={loguear}  />
+          </>
+        }     
+       
     </div>
   );
 }
- /* 
-  <div className={dark ? `App dark` : 'App'}>
-  <Login />
-   <Sidebar modo={modo} />
- */
+
 export default App;

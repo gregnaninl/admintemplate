@@ -4,9 +4,10 @@
     
     --first-color:rebeccapurple;
     --first-color-alt:#edbef6;
-    --white-color :#ebe9eb;
-    --color-back :rebeccapurple;
-    --color :#ffffff;
+    --white-color :#ffffff;
+    --color-back :#EEF0F8;
+    --color :#000000;
+    --color-btn:#ffff00;
    
 }
 
@@ -16,13 +17,30 @@
     --first-color-alt:rgb(156,156,156);
     --white-color :#585358; 
     --color-back :#111;
-    --color :#ffffff;
+    --color :rgb(156,156,156);
+    --color-btn:#585358;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
 
 .App{
+   /* background-color: var(--color-back);
+    color:var(--color);   */ 
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /*margin:var(--header-height) 0 0 0;*/
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    transition: 0.5s;
     background-color: var(--color-back);
-    color:var(--color);
-    
+    color: var(--color);
 }
 
 

@@ -1,10 +1,10 @@
-:root{
+/*:root{
     --header-height: 2rem;
     --nav-width: 68px;
 
     --first-color:rebeccapurple;
     --first-color-alt:#edbef6;
-    --white-color :#ebe9eb;
+    --white-color :#ffffff;
     --color-back :#ffffff;
     --color :#000000;
    
@@ -23,7 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     
-}
+}*/
 
 a{
     text-decoration: none;
@@ -32,17 +32,16 @@ ul{
     list-style: none;
 }
 main{
-    height: 100vh;
-    width: 100%;
+   /* height: 100vh;
+    width: 100%;*/
     position: relative;
     margin:var(--header-height) 0 0 0;
     padding: 5px;
     font-size: 1rem;
     font-family: 'Nunito Sans', sans-serif;
     transition: 0.5s;
-    background-color: var(--color-back);
-    color: var(--color);
-    
+   /* background-color: var(--color-back);
+    color: var(--color);*/    
 }
 
 .header{
@@ -74,7 +73,7 @@ main{
     background-color: var(--first-color);
     padding-top: 1rem;
     transition: 0.5s;
-    border-right: #e0dbe0;
+    border-right: 0.5px solid rgb(190, 190, 190);
 }
 
 .nav{
@@ -98,11 +97,13 @@ main{
     margin-bottom: 2rem;
 }
 
-.nav-logo-icon{
+.nav-logo-icon,
+.nav-list-icon{
     font-size: 1.25rem;
     color: var(--white-color);
     cursor: pointer;
 }
+
 
 .nav-logo-name{
     font-weight:700;
@@ -130,7 +131,7 @@ main{
     position: absolute;
     left: 0;
     top: 0;
-    height: 34px;
+    height: 38px;
     width:3px;
     background-color: var(--white-color);
     transition: 0.5s;
