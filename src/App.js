@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Sidebar from "./components/sidebar/Sidebar";
+import React, { useState } from 'react';
+import Login from "./pages/login/Login";
+import './index.css';
+
+
+
+import Container from 'react-bootstrap/Container';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [dark , setDark] = useState(false);
+
+  const modo = ( )=>{setDark(!dark);}
+
+  return ( 
+   
+    <div className={dark ? `App dark` : 'App'}>
+       <Sidebar modo={modo} />
     </div>
   );
 }
-
+ /* 
+  <div className={dark ? `App dark` : 'App'}>
+  <Login />
+   <Sidebar modo={modo} />
+ */
 export default App;
