@@ -1,19 +1,15 @@
 import Sidebar from "./components/sidebar/Sidebar";
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Login from "./pages/login/Login";
 import './index.css';
-
-
-
-
+import { MenuContext } from "./context/menuContext";
 
 
 function App() {
 
-  const [dark , setDark] = useState(false);
+  const{dark} = useContext(MenuContext);  
   const [ login , setLogin] = useState(false);
-
-  const modo = ( )=>{setDark(!dark);}
+  
   
   const loguear = (datos)=>{
     setLogin(datos);
@@ -24,7 +20,7 @@ function App() {
     <div className={dark ? `App dark` : 'App'}> 
         {login ? 
           <>
-            <Sidebar modo={modo} loguear={loguear} />
+            <Sidebar loguear={loguear} />
           </>
               :
           <>

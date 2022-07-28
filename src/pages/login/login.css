@@ -34,7 +34,7 @@
   }
 .login-span{
 	margin-top: 10px;
-	color: red;
+	color: var(--color-danger);
 	font-weight: bold;
   }
 

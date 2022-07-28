@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './sidebar.css';
 import {Link} from 'react-router-dom';
 import { Switch } from '@mui/material';
+import { MenuContext } from '../../context/menuContext';
+
 
 const Sidebar = (props) => {
 
-    const [show , setShow] = useState(false);
+    const{show ,dispatch } = useContext(MenuContext);  
     
    
   return (
     <main className= {show ? 'space-toggle' : null }  >
       <header className={`header ${show ? 'space-toggle' : null}`}> 
-        <div className='header-toggle' onClick={()=> setShow(!show)}>
-            <i className="fa-solid fa-bars"></i>
+        <div className='header-toggle' onClick={()=> dispatch({type:"SHOW"})} >
+            <i className="fa-solid fa-bars nav-bar-icon"></i>
         </div> 
         <div>
-        <Switch className='modo-color' defaultChecked onChange={()=> props.modo()} color='secondary' />
+        <Switch className='modo-color' defaultChecked onChange={()=> dispatch({type:"DARK"})} color='secondary' />
         </div>       
       </header>
       

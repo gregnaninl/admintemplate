@@ -8,6 +8,7 @@
     --color-back :#EEF0F8;
     --color :#000000;
     --color-btn:#ffff00;
+    --color-danger:#fc1313;
    
 }
 
@@ -19,6 +20,7 @@
     --color-back :#111;
     --color :rgb(156,156,156);
     --color-btn:#585358;
+    --color-danger:#975e5e;
 }
 
 *{
