@@ -209,6 +209,85 @@ main{
     }
 }
 
+/* Card */
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  overflow: hidden;
+}
+
+.card-header, .card-footer {
+  border-color: #ebeef4;
+  /*background-color: #fff;*/
+  color: #798eb3;
+  padding: 15px;
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--first-color);
+  font-family: "Poppins", sans-serif;
+}
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+  .info-card {
+      padding-bottom: 10px;
+    }
+  .info-card h6 {
+      font-size: 22px;
+      color: #012970;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+
+    .info-card h5 {
+      font-size: 15px;
+      color: #292a2e;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+
+  .card-icon {
+      font-size: 32px;
+      line-height: 0;
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+    
+    .home-card .card-icon {
+      color: #8c2eca;
+      background: #f1e0f8;
+           
+    }
+
+       
+
 
 /*page not found*/
 

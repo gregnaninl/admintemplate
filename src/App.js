@@ -5,10 +5,10 @@ import { MenuContext } from "./context/menuContext";
 
 
 //pages
-import Ramas from './pages/Ramas';
+import Ramas from './pages/ramas/Ramas';
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/Home";
-import Polizas from "./pages/Polizas";
+import Polizas from "./pages/polizas/Polizas";
 import Login from "./pages/login/Login";
 import NotFound from './pages/NotFound';
 
@@ -42,25 +42,3 @@ function App() {
 
 
 export default App;
-
-/*<Sidebar loguear={loguear} />
-      <Dashboard />
-       <div className={dark ? `App dark` : 'App'}> 
-        {login ? 
-          <>
-            <main className= {show ? 'space-toggle' : null }  >
-            <Navbar />
-            <Sidebar />
-            <Rutas />
-
-            </main>
-          </>
-              :
-          <>
-            <Login loguear={loguear}  />
-          </>
-        }     
-       
-    </div>
-      
-      */
