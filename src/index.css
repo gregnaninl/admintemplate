@@ -1,5 +1,5 @@
 :root{
-    --header-height: 2rem;
+    --header-height: 3.5rem;
     --nav-width: 68px;
     
     --first-color:rebeccapurple;
@@ -44,6 +44,265 @@
     background-color: var(--color-back);
     color: var(--color);
 }
+
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+main{
+   /* height: 100vh;
+    width: 100%;*/
+    position: relative;
+    margin:var(--header-height) 0 0 0;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    transition: 0.5s;
+   /* background-color: var(--color-back);
+    color: var(--color);*/    
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: var(--header-height);
+    max-height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 5px;
+    transition: .5s;    
+}
+
+.header-toggle{
+    font-size: 1.25rem;
+    cursor: pointer;
+    color:var(--first-color);
+}
+
+.sidebar{
+    position: fixed;
+    top:0;
+    left: -30%;
+    height: 100vh;
+    width: var(--nav-width);
+    background-color: var(--first-color);
+    padding-top: 1rem;
+    transition: 0.5s;
+    border-right: 0.5px solid rgb(190, 190, 190);
+}
+
+.avatar{
+    width: 40px;
+    height: 30px;
+    border-radius: 50;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;    
+    height: 100%;
+}
+
+.nav-logo{ 
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+ 
+} 
+
+
+.nav-link-list {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 2rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+   
+}
+
+
+.nav-bar-icon{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 2rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.nav-logo-icon,
+.nav-list-icon{
+    font-size: 1.25rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+.nav-logo-name{
+    font-weight:700;
+    color: var(--white-color);
+}
+
+.nav-link-list {
+    position: relative;
+    color: var(--first-color-alt);
+    transition: 0.5s;
+    margin-bottom: 0.5rem;
+}
+
+.nav-link-list:hover{
+    color: var(--white-color);
+    background-color: rgba(0,0,0,0.1);    
+}
+
+.active{
+    color: var(--white-color);
+    background-color: rgba(0,0,0,0.1)
+}
+.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 38px;
+    width:3px;
+    background-color: var(--white-color);
+    transition: 0.5s;
+}
+
+
+.show{
+    left:0
+}
+.space-toggle{
+    padding-left:calc((68px) + 5px); /* var(--nav-width)*/
+}
+
+@media screen and (min-width:768px) {
+    main{
+        margin: 4rem 0 2rem 0;/*calc((3rem) +1rem);*/
+        padding: 0 1rem 0 75px;/*calc((68px)+ 2rem);*/
+    }
+
+    .header{
+        height: 4rem;/*calc((3rem) +1rem);*/
+        padding-left:75px;/* calc((68px) + 2rem);*/
+    }
+    .sidebar{
+        left: 0;
+        padding: 1.5rem 0,0,0;        
+    }
+    .show{
+        width: 200px;/*calc(48px+156px);*/
+    }
+    .space-toggle{
+        padding-left:205px;/* calc((68px)+188px);*/
+    }
+}
+
+
+/*page not found*/
+
+.error-container {
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    margin: 20px 15px;
+  }
+  .error-container > span {
+    display: inline-block;
+    line-height: 0.7;
+    position: relative;
+    color: #FFB485;
+  }
+  .error-container > span > span {
+    display: inline-block;
+    position: relative;
+  }
+  .error-container > span:nth-of-type(1) {
+    perspective: 1000px;
+    perspective-origin: 500% 50%;
+    color: #F0E395;
+  }
+  .error-container > span:nth-of-type(1) > span {
+    transform-origin: 50% 100% 0px;
+    transform: rotateX(0);
+    animation: easyoutelastic 8s infinite;
+  }
+  
+  .error-container > span:nth-of-type(3) {
+    perspective: none;
+    perspective-origin: 50% 50%;
+    color: #D15C95;
+  }
+  .error-container > span:nth-of-type(3) > span {
+    transform-origin: 100% 100% 0px;
+    transform: rotate(0deg);
+    animation: rotatedrop 8s infinite;
+  }
+  @keyframes easyoutelastic {
+    0% {
+      transform: rotateX(0);
+    }
+    9% {
+      transform: rotateX(210deg);
+    }
+    13% {
+      transform: rotateX(150deg);
+    }
+    16% {
+      transform: rotateX(200deg);
+    }
+    18% {
+      transform: rotateX(170deg);
+    }
+    20% {
+      transform: rotateX(180deg);
+    }
+    60% {
+      transform: rotateX(180deg);
+    }
+    80% {
+      transform: rotateX(0);
+    }
+    100% {
+      transform: rotateX(0);
+    }
+  }
+  
+  @keyframes rotatedrop {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate(30deg);
+    }
+    15% {
+      transform: rotate(90deg);
+    }
+    70% {
+      transform: rotate(90deg);
+    }
+    80% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotateX(0);
+    }
+  }
+      
+  
+
 
 
   

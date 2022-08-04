@@ -1,29 +1,3 @@
-/*:root{
-    --header-height: 2rem;
-    --nav-width: 68px;
-
-    --first-color:rebeccapurple;
-    --first-color-alt:#edbef6;
-    --white-color :#ffffff;
-    --color-back :#ffffff;
-    --color :#000000;
-   
-}
-
-.dark{
-    --first-color:#111;
-    --first-color-alt:rgb(156,156,156);
-    --white-color :#585358; 
-    --color-back :#111;
-    --color:#ffffff;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}*/
 
 a{
     text-decoration: none;
@@ -49,6 +23,7 @@ main{
     top:0;
     left: 0;
     height: var(--header-height);
+    max-height: 3.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -120,7 +95,7 @@ main{
     position: relative;
     color: var(--first-color-alt);
     transition: 0.5s;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .nav-link-list:hover{
